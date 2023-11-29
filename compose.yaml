@@ -1,0 +1,12 @@
+services:
+    dev:
+        build: .
+        image: sym4444/ubt-dev
+        ports:
+            # docker映射物理机器端口
+            - "2222:22"
+    
+        volumes:
+            # docker映射物理机器路径
+            - /var/HFDB:/var/HFDB
+            - /var/TSDB:/var/TSDB
